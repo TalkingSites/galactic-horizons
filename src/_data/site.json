@@ -1,5 +1,5 @@
 {
-  "title": "Space Club!",
+  "title": "Galactic Horizons",
   "description": "Space Club! is our way of putting content for this web template. Check out the pages, posts, events and search. Whats it built with? Great question, it is 11ty, Nunjucks",
   "logo": "/assets/images/logo.svg",
   "favicon": "/assets/images/favicon.svg",
@@ -8,9 +8,9 @@
   "dateFormat": "dddd, Do MMMM YYYY",
   "searchTitle": "Search",
   "searchPlaceholder": "Search events, posts and pages...",
-  "url": "",
+  "url": "https://galactic-horizons.sites.talkingsites.org",
   "matomo": {
-    "url": "",
-    "siteId": null
+    "url": "https://analytics.talkingsites.org/",
+    "siteId": 10
   }
 }
