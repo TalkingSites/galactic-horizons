@@ -1,0 +1,10 @@
+{% set steps = [] %}
+{% for s in [[step1Title, step1Text], [step2Title, step2Text], [step3Title, step3Text], [step4Title, step4Text]] %}{% if s[0] %}{% set steps = (steps.push(s), steps) %}{% endif %}{% endfor %}
+<section class="gh-section gh-bg-{{ sectionBg or 'paper' }}" id="{{ sectionTitle | slugify }}">
+<div class="container">
+<h2>{{ sectionTitle }}</h2>
+<ol class="gh-steps{% if steps | length > 3 %} gh-steps-4{% endif %}{% if stepsCount == "down" %} gh-countdown{% endif %}"{% if stepsCount == "down" %} style="counter-reset: step {{ steps | length + 1 }}"{% endif %}>
+{% for s in steps %}<li><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></li>
+{% endfor %}</ol>
+</div>
+</section>

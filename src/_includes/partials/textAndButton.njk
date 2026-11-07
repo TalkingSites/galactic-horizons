@@ -1,0 +1,7 @@
+<section class="gh-section gh-bg-{{ sectionBg or 'night' }}" id="{{ sectionTitle | slugify }}">
+<div class="container gh-narrow">
+<h2>{{ sectionTitle }}</h2>
+<div class="gh-sub">{{ sectionText | markdown | safe }}</div>
+{% include "partials/sectionLinks.njk" %}
+</div>
+</section>

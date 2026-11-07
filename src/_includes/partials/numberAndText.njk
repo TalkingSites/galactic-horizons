@@ -1,0 +1,13 @@
+<section class="gh-section gh-bg-{{ sectionBg or 'deep' }}" id="{{ sectionTitle | slugify }}">
+<div class="container gh-split">
+<div>
+<p class="gh-figure">{{ number1 }}</p>
+<p>{{ number1Text }}</p>
+</div>
+<div>
+<h2>{{ sectionTitle }}</h2>
+{{ sectionText | markdown | safe }}
+{% include "partials/sectionLinks.njk" %}
+</div>
+</div>
+</section>

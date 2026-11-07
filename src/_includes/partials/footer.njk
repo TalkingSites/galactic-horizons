@@ -1,0 +1,16 @@
+<footer id="footer-main" class="gh-footer gh-space">
+<svg class="gh-footer-limb" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90Q720-70 1440 90Z" fill="#f6f2e9"/></svg>
+<div class="container">
+<div class="gh-footer-top">
+<p class="gh-footer-line">{{ site.tagline }}</p>
+<nav aria-label="Footer">
+<ul>
+{% for item in navbar.items %}{% if item.footer %}<li><a href="{{ item.href }}">{{ item.title }}</a></li>{% endif %}{% endfor %}
+<li><a href="{{ site.applyUrl }}" target="_blank" rel="noopener">Apply</a></li>
+<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+</ul>
+</nav>
+</div>
+<p class="gh-footer-legal">© {{ global.currentYear }} {{ site.title }}</p>
+</div>
+</footer>

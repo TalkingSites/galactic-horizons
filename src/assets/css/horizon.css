@@ -1,0 +1,213 @@
+:root {
+  --ink: #0a0e22;
+  --night: #141a3a;
+  --paper: #f6f2e9;
+  --tint: #ece5d5;
+  --flare: #ff9a4d;
+  --sun: #ffc861;
+  --rust: #b93a0b;
+  --line: #dcd5c5;
+  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --body: "Instrument Sans", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body { font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; color: var(--night); }
+h1, h2, h3 { font-family: var(--display); color: inherit; letter-spacing: .005em; }
+h1 { font-weight: 900; line-height: .92; }
+h2 { font-weight: 800; font-size: clamp(2.4rem, 5vw, 3.75rem); line-height: 1; margin-bottom: 1.25rem; }
+h3 { font-weight: 800; font-size: 1.6rem; line-height: 1.1; }
+:focus-visible { outline: 3px solid var(--flare); outline-offset: 2px; }
+.gh-page { min-height: 55vh; }
+.gh-page h1 { font-size: clamp(3rem, 7vw, 5rem); color: var(--night); margin-bottom: 1.5rem; }
+
+/* navbar */
+#navbar-main { background: var(--ink) !important; box-shadow: none !important; padding-block: .6rem; }
+#navbar-main .navbar-brand { gap: .6rem !important; }
+.gh-bg-paper, .gh-bg-sand { color: var(--night); }
+#navbar-main .sc-site-title { font-family: var(--display); font-weight: 800; font-size: 1.6rem !important; color: var(--paper); }
+#navbar-main .nav-link { color: #d9d6e4; font-weight: 500; }
+#navbar-main .nav-link:hover, #navbar-main .nav-link.active { color: var(--sun); }
+#navbar-main .navbar-toggler { border-color: #ffffff55; }
+#navbar-main .navbar-toggler-icon { filter: invert(1); }
+
+/* buttons */
+.gh-btn { display: inline-block; padding: .8rem 1.5rem; border-radius: 6px; background: var(--flare); color: var(--ink); font-weight: 600; text-decoration: none; border: 2px solid var(--flare); transition: background .15s, border-color .15s, color .15s; }
+.gh-btn:hover { background: var(--sun); border-color: var(--sun); color: var(--ink); }
+.gh-btn-sm { padding: .4rem 1rem; font-size: .95rem; white-space: nowrap; }
+.gh-btn-ghost { background: transparent; color: var(--paper); border-color: #ffffff66; }
+.gh-btn-ghost:hover { background: #ffffff1a; border-color: var(--paper); color: var(--paper); }
+.gh-btn-dark { background: var(--night); border-color: var(--night); color: var(--paper); }
+.gh-btn-dark:hover { background: var(--rust); border-color: var(--rust); color: #fff; }
+.gh-hero .gh-btn-ghost { background: #0a0e22b3; }
+.gh-hero .gh-btn-ghost:hover { background: #141a3a; }
+.gh-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* hero */
+.gh-hero { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); min-height: calc(100svh - 68px); display: flex; align-items: flex-start; }
+.gh-hero-art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.gh-hero-copy { position: relative; padding-block: clamp(3rem, 9vh, 6.5rem); }
+.gh-hero h1 { font-size: clamp(4.25rem, 12.5vw, 10.5rem); max-width: 8.5em; margin-bottom: 1.5rem; }
+.gh-lede { max-width: 34rem; font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.5; margin-bottom: 2rem; }
+.gh-trajectory { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.gh-tick { fill: var(--ink); stroke: #ffe7c2; stroke-width: 2; transition: opacity .25s; }
+.gh-hero-short { min-height: 0; background-color: var(--ink); }
+.gh-hero-short h1 { font-size: clamp(3.75rem, 10vw, 8rem); max-width: 11ch; }
+
+/* facts */
+.gh-facts { background: var(--ink); color: var(--paper); border-top: 1px solid #ffffff22; }
+.gh-facts dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.25rem 2rem; margin: 0; padding-block: 1.75rem; }
+.gh-facts dt { font-family: var(--mono); font-size: .8rem; font-weight: 400; color: #b9b6c9; }
+.gh-facts dd { margin: 0; font-weight: 600; }
+
+/* sections */
+.gh-section { padding-block: clamp(3.5rem, 9vw, 7rem); }
+.gh-bg-night { background: var(--night); color: var(--paper); }
+.gh-bg-sand { background: var(--tint); }
+.gh-sub { font-size: 1.15rem; max-width: 38rem; margin-bottom: 1rem; }
+.gh-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.gh-narrow { max-width: 780px; }
+.gh-list ul { list-style: none; padding: 0; margin: 1rem 0 0; }
+.gh-list li { padding: .8rem 0; border-top: 1px solid var(--line); }
+.gh-list li:last-child { border-bottom: 1px solid var(--line); }
+
+/* the twelve Thursdays */
+.gh-weeks { list-style: none; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; padding: 0; margin: 2.5rem 0; }
+.gh-weeks li { padding: .7rem .25rem; text-align: center; border: 1px solid #ffffff2e; border-radius: 4px; }
+.gh-weeks span { display: block; font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1; }
+.gh-weeks time { font-family: var(--mono); font-size: .68rem; color: #c5c2d4; white-space: nowrap; }
+.gh-weeks .is-done { background: #ff9a4d; border-color: #ff9a4d; color: var(--ink); }
+.gh-weeks .is-done time { color: var(--ink); }
+.gh-weeks .is-next { border-color: var(--sun); box-shadow: inset 0 0 0 1px var(--sun); }
+.gh-next { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.gh-next p { flex: 1 1 100%; margin: 0 0 .5rem; }
+.gh-next a:not(.gh-btn) { color: var(--sun); }
+.gh-next .gh-actions { flex: 1 1 100%; }
+
+/* steps */
+.gh-steps { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; padding: 0; margin: 2rem 0 0; }
+.gh-steps-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gh-steps li { counter-increment: step; border-top: 3px solid var(--night); padding-top: 1rem; }
+.gh-steps li::before { content: counter(step); display: block; font-family: var(--display); font-weight: 900; font-size: 3.25rem; line-height: 1; color: var(--rust); margin-bottom: .5rem; }
+
+.gh-figure { font-family: var(--display); font-weight: 900; font-size: clamp(4.5rem, 11vw, 8rem); line-height: 1; margin: 0 0 .5rem; }
+.gh-bg-night .gh-figure { color: var(--flare); }
+.gh-bg-sand .gh-figure { color: var(--rust); }
+.gh-figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+.gh-figures p:last-child { margin: 0; }
+.gh-page .alert { background: var(--tint); border-color: var(--line); color: var(--night); }
+
+/* questions */
+.gh-faq details { border-top: 1px solid var(--line); }
+.gh-faq details:last-child { border-bottom: 1px solid var(--line); }
+.gh-faq summary { padding: 1rem 2rem 1rem 0; font-weight: 600; cursor: pointer; list-style: none; position: relative; }
+.gh-faq summary::-webkit-details-marker { display: none; }
+.gh-faq summary::after { content: "+"; position: absolute; right: .25rem; top: .75rem; font-family: var(--mono); font-size: 1.25rem; color: var(--rust); }
+.gh-faq details[open] summary::after { content: "\2212"; }
+.gh-faq p { padding-right: 2rem; }
+
+/* footer */
+.gh-footer { background: var(--ink); color: var(--paper); padding-block: 3.5rem 2rem; }
+.gh-footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+.gh-footer-line { font-family: var(--display); font-weight: 800; font-size: 1.9rem; line-height: 1.1; max-width: 26rem; margin: 0; }
+.gh-footer ul { list-style: none; padding: 0; margin: 0; }
+.gh-footer li { margin-bottom: .4rem; }
+.gh-footer a { color: var(--paper); text-underline-offset: 3px; }
+.gh-footer a:hover { color: var(--sun); }
+.gh-footer-legal { font-family: var(--mono); font-size: .8rem; color: #b9b6c9; margin: 2.5rem 0 0; }
+
+@media (max-width: 991.98px) {
+  .gh-steps-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gh-weeks { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+@media (max-width: 767.98px) {
+  .gh-split, .gh-steps, .gh-steps-4, .gh-figures { grid-template-columns: minmax(0, 1fr); }
+  .gh-weeks { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #navbar-main .navbar-collapse { background: var(--ink); }
+  .gh-hero { min-height: 640px; }
+}
+
+/* search in the navbar */
+.gh-search { display: inline-flex; align-items: center; gap: .5rem; padding: .4rem .6rem; background: none; border: 0; border-radius: 6px; color: #d9d6e4; font-weight: 500; }
+.gh-search:hover { color: var(--sun); }
+#searchModal .modal-title { font-family: var(--display); font-size: 1.6rem; }
+@media (max-width: 1199.98px) {
+  .gh-search-word { display: none; }
+  #navbar-main .container { flex-wrap: wrap; }
+  #navbar-main #nav { flex: 0 0 100%; }
+  #navbar-main .sc-navbar-side:not(#nav) { flex: 0 0 auto; }
+}
+/* on phones the name stays and the logo goes; on the narrowest the logo stands in for the name */
+@media (max-width: 420px) {
+  #navbar-main .container { gap: .25rem; }
+  #navbar-main .navbar-brand img { display: none; }
+}
+@media (max-width: 389.98px) {
+  #navbar-main .sc-site-title { font-size: 1.25rem !important; }
+}
+@media (max-width: 359.98px) {
+  #navbar-main .navbar-brand img { display: block; }
+  #navbar-main .sc-site-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+
+/* space: two tiles of stars, the brighter one twinkling */
+.gh-space, .gh-bg-night, .gh-bg-deep { position: relative; overflow: hidden; background-image: url("/assets/images/stars.svg"); background-size: 1400px; }
+.gh-space::after, .gh-bg-night::after, .gh-bg-deep::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: url("/assets/images/stars-bright.svg") 240px 120px / 1400px; animation: gh-twinkle 5s ease-in-out infinite alternate; }
+.gh-space > .container, .gh-bg-night > .container, .gh-bg-deep > .container { position: relative; z-index: 1; }
+.gh-hero-art { z-index: 0; }
+.gh-bg-deep { background-color: var(--ink); color: var(--paper); }
+.gh-bg-night .gh-list li, .gh-bg-night .gh-list li:last-child { border-color: #ffffff2e; }
+.gh-bg-night .gh-steps li { border-top-color: var(--flare); }
+.gh-bg-night .gh-steps li::before { color: var(--flare); }
+.gh-bg-deep .gh-figure { color: var(--flare); }
+@keyframes gh-twinkle { from { opacity: .35; } to { opacity: 1; } }
+
+/* drawn objects */
+.gh-bg-sand { position: relative; overflow: hidden; }
+.gh-bg-sand > .container { position: relative; }
+.gh-art { position: absolute; pointer-events: none; }
+.gh-art-planet { width: 340px; left: -150px; bottom: -170px; opacity: .9; }
+.gh-art-orbits { width: 620px; right: -170px; top: -190px; }
+.gh-art-stars { width: 280px; right: 3%; top: 1.5rem; }
+.gh-art-moon { width: min(640px, 52vw); right: -2%; top: 50%; transform: translateY(-50%); }
+.gh-orbit { transform-box: view-box; transform-origin: 50% 50%; animation: gh-spin 40s linear infinite; }
+.gh-orbit-b { animation-duration: 75s; animation-direction: reverse; }
+@keyframes gh-spin { to { transform: rotate(360deg); } }
+.gh-flame { transform-box: fill-box; transform-origin: 100% 50%; animation: gh-flicker .16s ease-in-out infinite alternate; }
+.gh-flame-core { animation-duration: .11s; }
+@keyframes gh-flicker { to { transform: scaleX(.72); } }
+.gh-satellite { animation: gh-drift 9s ease-in-out infinite alternate; }
+@keyframes gh-drift { to { translate: 26px -12px; } }
+.gh-meteor { position: absolute; z-index: 0; top: 10%; left: 60%; width: 130px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #fff, transparent); opacity: 0; rotate: -24deg; animation: gh-meteor 11s 3.5s linear infinite; }
+@keyframes gh-meteor { 0% { opacity: 0; transform: translateX(0); } 2% { opacity: 1; } 9% { opacity: 0; transform: translateX(-520px); } 100% { opacity: 0; transform: translateX(-520px); } }
+
+/* moon phases for the twelve Thursdays */
+.gh-weeks li { background: #0a0e2299; }
+.gh-weeks svg { display: block; width: 30px; margin: 0 auto .4rem; }
+.gh-moon-dark { fill: #ffffff14; }
+.gh-moon-lit { fill: #ffffff38; }
+.gh-weeks .is-done { background: #0a0e2299; border-color: #ff9a4d88; color: var(--paper); }
+.gh-weeks .is-done time { color: #c5c2d4; }
+.gh-weeks .is-done .gh-moon-lit, .gh-weeks .is-next .gh-moon-lit { fill: var(--sun); }
+
+/* the countdown runs 3, 2, 1 */
+.gh-countdown { counter-reset: step 4; }
+.gh-countdown li { counter-increment: step -1; }
+
+/* the footer sits under the curve of a pale planet */
+.gh-footer { padding-top: 6rem; flex-shrink: 0; }
+#footer-main.gh-space { background: var(--ink) url("/assets/images/stars.svg") 0 0 / 1400px; }
+.gh-footer-limb { position: absolute; top: -1px; left: 0; width: 100%; height: 56px; transform: scaleY(-1); }
+
+@media (max-width: 991.98px) {
+  .gh-art-stars { display: none; }
+  .gh-art-moon { opacity: .4; right: -20%; width: 480px; }
+}
+@media (max-width: 767.98px) {
+  .gh-art-planet { display: none; }
+  .gh-art-orbits { width: 340px; right: -190px; top: -190px; }
+  .gh-footer-limb { height: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gh-space::after, .gh-bg-night::after, .gh-bg-deep::after, .gh-orbit, .gh-flame, .gh-satellite, .gh-meteor { animation: none; }
+}

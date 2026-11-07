@@ -1,18 +1,23 @@
 {
   "items": [
     {
-      "title": "Home",
+      "title": "Accelerator",
       "href": "/",
       "footer": true
     },
     {
-      "title": "About",
-      "href": "/about",
+      "title": "Pre-Accelerator",
+      "href": "/pre-accelerator/",
       "footer": true
     },
     {
-      "title": "Contact",
-      "href": "/contact",
+      "title": "Questions",
+      "href": "/questions/",
+      "footer": true
+    },
+    {
+      "title": "Events",
+      "href": "/events/",
       "footer": true
     }
   ]

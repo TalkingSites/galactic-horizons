@@ -1,0 +1,9 @@
+<section class="gh-section gh-bg-{{ sectionBg or 'sand' }}" id="{{ sectionTitle | slugify }}">
+{% include "partials/spaceArt.njk" %}
+<div class="container">
+<h2>{{ sectionTitle }}</h2>
+<div class="gh-figures">
+{% for n in [[number1, number1Text], [number2, number2Text], [number3, number3Text]] %}{% if n[0] %}<div><p class="gh-figure">{{ n[0] }}</p><p>{{ n[1] }}</p></div>
+{% endif %}{% endfor %}</div>
+</div>
+</section>

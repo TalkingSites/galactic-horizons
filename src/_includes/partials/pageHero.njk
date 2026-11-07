@@ -1,0 +1,9 @@
+<section class="gh-hero gh-hero-short gh-space">
+{% set sectionArt = heroArt %}{% include "partials/spaceArt.njk" %}
+<div class="container gh-hero-copy">
+<h1>{{ heroTitle }}</h1>
+{% if heroLead %}<p class="gh-lede">{{ heroLead }}</p>{% endif %}
+{% set sectionBg = "night" %}{% set sectionLinkText = heroAction %}{% set sectionLinkUrl = heroLink %}{% set sectionLink2Text = "" %}
+{% include "partials/sectionLinks.njk" %}
+</div>
+</section>

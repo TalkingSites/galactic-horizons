@@ -1,0 +1,8 @@
+{%- if sectionLinkText or sectionLink2Text %}
+<div class="gh-actions">
+{%- set btnText = sectionLinkText %}{% set btnUrl = sectionLinkUrl %}{% set btnClass = "gh-btn-dark" if sectionBg in ["", "paper", "sand"] else "" %}
+{%- include "partials/linkButton.njk" %}
+{%- set btnText = sectionLink2Text %}{% set btnUrl = sectionLink2Url %}{% set btnClass = "gh-btn-ghost" %}
+{%- include "partials/linkButton.njk" %}
+</div>
+{%- endif %}

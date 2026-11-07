@@ -1,0 +1,30 @@
+{% set plan = cohortStart | cohortPlan(cohortEnd) %}
+<section class="gh-section gh-bg-deep" id="cohort">
+{% set sectionArt = "orbits" %}{% include "partials/spaceArt.njk" %}
+<div class="container">
+{% if plan.state == "running" %}
+<h2>{{ runningTitle }}</h2>
+<p class="gh-sub">{{ plan.done }} of {{ plan.weeks | length }} Thursdays done, finishing on {{ plan.end }}.</p>
+{% elif plan.state == "soon" %}
+<h2>The next cohort starts {{ plan.start }}</h2>
+<p class="gh-sub">{{ plan.weeks | length }} Thursdays, finishing on {{ plan.end }}.</p>
+{% else %}
+<h2>{{ waitingTitle }}</h2>
+<p class="gh-sub">{{ waitingText }}</p>
+{% endif %}
+{% if plan.state != "over" %}
+<ol class="gh-weeks">
+{% for w in plan.weeks %}<li class="{{ 'is-done' if w.done }}{{ 'is-next' if w.next }}"><svg viewBox="-16 -16 32 32" aria-hidden="true"><circle r="14" class="gh-moon-dark"/><path d="{{ w.moon }}" class="gh-moon-lit"/></svg><span>{{ w.n }}</span><time>{{ w.date }}</time></li>{% endfor %}
+</ol>
+{% endif %}
+<div class="gh-next">
+{% set nextEvent = collections.upcomingEvents[0] %}
+{% if nextEvent %}
+<p><a href="{{ nextEvent.url }}">{{ nextEvent.data.title }}</a>: {{ nextEvent.data.eventDate | formatDate }}, {{ nextEvent.data.startTime }}</p>
+{% else %}
+<p>{{ noEventsText }}</p>
+{% endif %}
+{% set sectionBg = "deep" %}{% include "partials/sectionLinks.njk" %}
+</div>
+</div>
+</section>

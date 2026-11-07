@@ -1,0 +1,15 @@
+<section class="gh-section gh-bg-{{ sectionBg or 'paper' }}" id="{{ sectionTitle | slugify }}">
+<div class="container gh-narrow">
+<h2>{{ sectionTitle }}</h2>
+<div class="gh-faq">
+{% for q in collections.questions | sort(false, false, "data.order") %}
+{% if not questionsGroup or q.data.program == questionsGroup or q.data.program == "Both" %}
+<details>
+<summary>{{ q.data.title }}</summary>
+<p>{{ q.data.answer }}</p>
+</details>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+</section>

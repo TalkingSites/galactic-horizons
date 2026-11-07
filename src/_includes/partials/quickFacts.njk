@@ -1,0 +1,7 @@
+<section class="gh-facts gh-space" aria-label="Key facts">
+<div class="container">
+<dl>
+{% for f in [[fact1Label, fact1Value], [fact2Label, fact2Value], [fact3Label, fact3Value], [fact4Label, fact4Value], [fact5Label, fact5Value]] %}{% if f[1] %}<div><dt>{{ f[0] }}</dt><dd>{{ f[1] }}</dd></div>
+{% endif %}{% endfor %}</dl>
+</div>
+</section>

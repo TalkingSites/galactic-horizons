@@ -1,0 +1,13 @@
+<section class="gh-section gh-bg-{{ sectionBg or 'paper' }}" id="{{ sectionTitle | slugify }}">
+{% include "partials/spaceArt.njk" %}
+<div class="container gh-split">
+<div>
+<h2>{{ sectionTitle }}</h2>
+{{ sectionText | markdown | safe }}
+</div>
+<div>
+{% if listTitle %}<h3>{{ listTitle }}</h3>{% endif %}
+<div class="gh-list">{{ sectionList | markdown | safe }}</div>
+</div>
+</div>
+</section>

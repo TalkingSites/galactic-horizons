@@ -1,0 +1,46 @@
+<section class="gh-hero gh-space">
+<svg class="gh-hero-art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs>
+<radialGradient id="gh-glow"><stop offset=".3" stop-color="#ffe2b0" stop-opacity=".95"/><stop offset=".4" stop-color="#ff9a4d" stop-opacity=".75"/><stop offset=".56" stop-color="#e8521f" stop-opacity=".4"/><stop offset=".78" stop-color="#7a2bbd" stop-opacity=".2"/><stop offset="1" stop-color="#0a0e22" stop-opacity="0"/></radialGradient>
+<radialGradient id="gh-nebula-a"><stop offset="0" stop-color="#7a2bbd" stop-opacity=".5"/><stop offset="1" stop-color="#7a2bbd" stop-opacity="0"/></radialGradient>
+<radialGradient id="gh-nebula-b"><stop offset="0" stop-color="#2b6fbd" stop-opacity=".38"/><stop offset="1" stop-color="#2b6fbd" stop-opacity="0"/></radialGradient>
+<linearGradient id="gh-path" gradientUnits="userSpaceOnUse" x1="560" y1="744" x2="1360" y2="132"><stop offset="0" stop-color="#ff9a4d"/><stop offset="1" stop-color="#fff3d6"/></linearGradient>
+<radialGradient id="gh-gas" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffd9a6"/><stop offset=".55" stop-color="#d8703a"/><stop offset="1" stop-color="#5a1f3f"/></radialGradient>
+<radialGradient id="gh-rock" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#e9e5f2"/><stop offset=".6" stop-color="#8d89a8"/><stop offset="1" stop-color="#2c2a48"/></radialGradient>
+</defs>
+<ellipse cx="1120" cy="170" rx="520" ry="300" fill="url(#gh-nebula-a)"/>
+<ellipse cx="880" cy="420" rx="420" ry="240" fill="url(#gh-nebula-b)"/>
+<ellipse cx="760" cy="880" rx="1500" ry="440" fill="url(#gh-glow)"/>
+<g class="gh-ringed" transform="translate(1085 200) rotate(-16)">
+<ellipse rx="86" ry="22" fill="none" stroke="#ffd9a6" stroke-opacity=".45" stroke-width="7"/>
+<circle r="48" fill="url(#gh-gas)"/>
+<path d="M-86 0A86 22 0 0 0 86 0" fill="none" stroke="#ffe7c2" stroke-width="7"/>
+</g>
+<g transform="translate(1290 500)">
+<circle r="30" fill="url(#gh-rock)"/>
+<circle cx="-9" cy="-8" r="6" fill="#2c2a48" opacity=".35"/><circle cx="10" cy="4" r="4" fill="#2c2a48" opacity=".35"/><circle cx="-4" cy="13" r="3" fill="#2c2a48" opacity=".35"/>
+</g>
+<g class="gh-satellite" transform="translate(1150 665) rotate(24)">
+<rect x="-5" y="-4" width="10" height="8" rx="1.5" fill="#e9e5f2"/><rect x="-24" y="-3" width="16" height="6" fill="#6f8bd8"/><rect x="8" y="-3" width="16" height="6" fill="#6f8bd8"/>
+</g>
+<circle cx="760" cy="2130" r="1400" fill="#060818"/>
+<circle cx="760" cy="2130" r="1400" fill="none" stroke="#ffd9a6" stroke-width="2.5"/>
+<path id="gh-trajectory" class="gh-trajectory" pathLength="1" d="M560 744C800 690 1190 540 1360 132" fill="none" stroke="url(#gh-path)" stroke-width="3" stroke-linecap="round"/>
+<g id="gh-ticks"></g>
+<g id="gh-rocket" transform="translate(1360 132) rotate(-67)">
+<path class="gh-flame" d="M-20-7Q-52 0-20 7Z" fill="#ffc861"/>
+<path class="gh-flame gh-flame-core" d="M-20-4Q-36 0-20 4Z" fill="#fff3d6"/>
+<path d="M-22-9L-30-16-14-10ZM-22 9L-30 16-14 10Z" fill="#ff6a2b"/>
+<path d="M-22-10Q6-13 30 0 6 13-22 10Z" fill="#f6f2e9"/>
+<path d="M14-7Q24-4 30 0 24 4 14 7Z" fill="#ff6a2b"/>
+<circle cx="3" r="4" fill="#2b6fbd" stroke="#141a3a" stroke-width="1.5"/>
+</g>
+</svg>
+<span class="gh-meteor" aria-hidden="true"></span>
+<div class="container gh-hero-copy">
+<h1>{{ heroTitle }}</h1>
+<p class="gh-lede">{{ heroLead }}</p>
+{% set sectionBg = "night" %}{% set sectionLinkText = heroAction %}{% set sectionLinkUrl = heroLink %}{% set sectionLink2Text = heroAction2 %}{% set sectionLink2Url = heroLink2 %}
+{% include "partials/sectionLinks.njk" %}
+</div>
+</section>
